@@ -1,28 +1,29 @@
 <template>
-<div>
-    
+<div id=signuppage>
+
   <form @submit.prevent ="validateForm">
-  <label for="email">Email</label>
-  <input type="email" placeholder="Email" required v-model="email">
-  <label for="password">Password</label>
-  <input type="password" placeholder="Password" required v-model="password">
-  <div v-if="validatePassword" class="error"> {{validatePassword}}</div>
+    <label for="email">Email</label>
+    <input type="email" placeholder="Email" required v-model="email">
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" required v-model="password">
+    <div v-if="validatePassword" class="error"> {{validatePassword}}</div>
 
-<div class="submit">
-    <button>Signup </button>
-</div>
-</form>
+    <div class="submit">
+      <button>Signup </button>
+    </div>
+  </form>
 
+  <footer-component/>
 
 </div>
 
 
 </template>
-
 <script>
+import footerComponent from "@/components/footer.vue"
 export default {
-name: "FormView", 
-
+  name: "FormView", 
+  components: {footerComponent}, 
 data: function() {
     return {
    email: '',
@@ -47,6 +48,15 @@ data: function() {
 </script>
 
 <style scoped>
+#signuppage{
+  display:flex; 
+  flex-direction: column;
+  gap:20px; 
+  height: 100%;
+  padding: 8px;
+  padding-top: 80px;
+}
+
 form {
   max-width: 420px;
   margin: 10px auto;
@@ -73,6 +83,7 @@ border: none;
 border-bottom: 1px solid white;
 color: blue;
 }
+
 button{
 background:  rgb(137, 207, 240);
 border: 0;

@@ -1,0 +1,30 @@
+<template>
+
+<div class="page-leftCol">
+  <div class='leftCol'></div>
+</div>
+
+</template>
+
+<script>
+export default {
+  name: "leftrightCols",
+}
+</script>
+
+<style scoped>
+.page-leftCol{
+  flex: 0 0 100px;
+  max-width: 20%; 
+}
+
+.leftCol {
+  height: 92%;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: #A9A9A9;
+}
+</style>

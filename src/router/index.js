@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import FormView from "../views/FormView.vue";
 import FetchView from "../views/FetchView.vue";
+import FunView from "../views/FunView.vue"
 
 const routes = [{
         path: "/",
@@ -9,14 +10,19 @@ const routes = [{
         component: HomeView,
     },
     {
-        path: "/form",
-        name: "form",
+        path: "/signup",
+        name: "signup",
         component: FormView,
     },
     {
         path: "/fetch",
         name: "fetch",
         component: FetchView,
+    },
+    {
+        path:"/fun", 
+        name:'fun', 
+        component: FunView,
     },
     {
         path: "/about",

@@ -3,11 +3,8 @@
 <div class="page-header">
   <header class='header'>
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/signup">Form Val.</router-link> |
-      <router-link to="/fetch">FetchAPI</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/fun">Fun</router-link>
+      <router-link to="/">Main</router-link> |
+      <router-link to="/signup">Form Val</router-link> 
     </nav>
   </header>
 </div>

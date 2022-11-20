@@ -22,7 +22,7 @@ import postsComponent from "@/components/posts.vue"
 
 
 export default {
-  name: 'FunView',
+  name: 'MainView',
   components: {footerComponent, leftrightCols, postsComponent}
 }
 </script>

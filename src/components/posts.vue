@@ -19,6 +19,6 @@ export default {
 <style scoped>
 .page-content{
   flex: 1 1 auto; 
-  background-color: grey;
+  max-width: 600px;
 }
 </style>

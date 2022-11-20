@@ -19,7 +19,7 @@ export default {
 }
 
 .leftCol {
-  height: 92%;
+  height: 100%;
   padding: 16px;
   display: flex;
   align-items: center;

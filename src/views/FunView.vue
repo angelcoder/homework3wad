@@ -35,7 +35,7 @@ export default {
 #main{
   display:flex; 
   flex-direction: column;
-  gap:20px; 
+  gap:40px; 
   height: 100%;
   padding: 8px;
 }

@@ -6,7 +6,6 @@
     <posts-component/>
     <leftright-cols/>
   </div>
-
   <footer-component/>
 
 </div>
@@ -18,7 +17,6 @@
 import footerComponent from "@/components/footer.vue"
 import leftrightCols from "@/components/leftrightcols.vue"
 import postsComponent from "@/components/posts.vue"
-
 
 
 export default {

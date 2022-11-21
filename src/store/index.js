@@ -1,6 +1,7 @@
 import { createStore } from "vuex";
 
 export default createStore({
+  strict: true,
   state: {
     posts: [    {
       "post_id": 1,
@@ -83,8 +84,42 @@ export default createStore({
       "photo" : " "
     }]
   },
-  getters: {},
-  mutations: {},
-  actions: {},
+  getters: {
+    postsget: state => {
+    var postsget = state.posts.map(post => {
+                 return {
+                  post_id: post.post_id,
+                  author_name: post.author_name,
+                  date: post.date,
+                  body: post.body, 
+                  num_likes: post.num_likes,
+                  photo: post.photo
+                 }
+             });
+             return postsget
+            },
+          
+
+    
+            },
+
+  mutations: {
+    addlike: state => {
+      state.posts.forEach(post => {
+          post.num_likes += 1;
+      })     
+    },
+    zero: state => {
+      state.posts.forEach(post => {
+        post.num_likes = 0;
+    })
+              },
+  },
+  
+  actions: {
+    
+  },
   modules: {},
 });
+
+

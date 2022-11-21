@@ -10,6 +10,7 @@
 
 <script>
 import getPost from  "@/components/getPost.vue"
+
 export default {
   name: "postsComponent",
   components: {getPost}

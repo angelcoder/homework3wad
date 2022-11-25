@@ -104,21 +104,22 @@ export default createStore({
             },
 
   mutations: {
-    addlike: state => {
-      state.posts.forEach(post => {
-          post.num_likes += 1;
-      })     
+    addlike (state, x){
+          state.posts.forEach(post =>{
+          if (x === post.post_id){
+            post.num_likes += 1;
+          }
+    })
     },
+
     zero: state => {
       state.posts.forEach(post => {
         post.num_likes = 0;
     })
-              },
+    }
   },
-  
-  actions: {
-    
-  },
+
+  actions: {},
   modules: {},
 });
 

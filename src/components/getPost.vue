@@ -35,7 +35,7 @@
               
               
               <div class="thumbs">
-                <button v-on:click="addlike"><img thumb src="../assets/images/like_thumb.png" width=" 20" height=" 20"/></button>
+                <button v-on:click="addlike(post.post_id)"><img thumb src="../assets/images/like_thumb.png" width=" 20" height=" 20"/></button>
                 {{ post.num_likes }} likes
                 </div>
 
@@ -56,20 +56,15 @@
 export default {
     name: "getPost",
     methods: {
-      getimgURL: function (url) {
-        if (url!=" ") {
-          return url;
-        }
 
-      },
-      addlike: function(){
-        this.$store.commit("addlike")
+      addlike: function(post_id){
+        this.$store.commit("addlike", {post_id})
         
       },
       
       zero: function(){
         this.$store.commit("zero")
-    }
+      }
     },
     computed: {
       

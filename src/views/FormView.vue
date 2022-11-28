@@ -2,28 +2,33 @@
 <div id=signuppage>
 
   <form @submit.prevent ="validateForm">
-    <label for="email">Email</label>
-    <input type="email" placeholder="Email" required v-model="email">
-    <label for="password">Password</label>
-    <input type="password" placeholder="Password" required v-model="password">
+    <div class="form_row_1">
+      <label for="email">Email</label>
+      <input type="email" placeholder="Email" required v-model="email">
+    </div>
+    <div class="form_row_2">
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" required v-model="password">
+    </div>
+
+
     <div v-if="validatePassword" class="error"> {{validatePassword}}</div>
 
     <div class="submit">
       <button>Signup </button>
     </div>
   </form>
-
-  <footer-component/>
+  <!-- <footer-component/> -->
 
 </div>
 
 
 </template>
 <script>
-import footerComponent from "@/components/footer.vue"
+// import footerComponent from "@/components/footer.vue"
 export default {
   name: "FormView", 
-  components: {footerComponent}, 
+  components: {},
 data: function() {
     return {
    email: '',
@@ -48,31 +53,51 @@ data: function() {
 </script>
 
 <style scoped>
+
+* {
+  box-sizing: border-box;
+}
+
 #signuppage{
-  display:flex; 
+  display:flex;
   flex-direction: column;
-  gap:20px; 
-  height: 100%;
+  height: 58vh;
+  margin-top: 30vh;
+  padding-top: 10px;
   padding: 8px;
-  padding-top: 80px;
+}
+
+.form_row_1, .form_row_2{
+  display: flex;
+  width:100%;
+  height: 30%;
+}
+
+.form_row_2{
+  margin-top: 10px;
 }
 
 form {
   max-width: 420px;
+  hight: 30%;
   margin: 10px auto;
   background:  rgb(208,240,192);
   border-radius: 20px;
   text-align: left;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
 }
 
 label {
+    flex: 1 1 auto;
     color: black;
-    display: inline-block;
+    display: block;
+    text-align: center;
+    padding-top: 7px;
 }
 
 input{
+flex: 0 0 auto;
 display: block;
 padding: 10px 6px;
 width: 60%;
@@ -94,13 +119,15 @@ border-radius: 20px;
 }
 h2, .submit{
     text-align: center;
+    margin-top: 10px;
 }
 
 
 .error{
     color: red;
-    font-size: 0.8em;
+    font-size: 0.7em;
     margin-top:  10px;
     text-align: center;
 }
+
 </style>

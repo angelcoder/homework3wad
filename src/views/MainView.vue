@@ -6,22 +6,21 @@
     <posts-component/>
     <leftright-cols/>
   </div>
-  <footer-component/>
-
+  <!-- <footer-component/> -->
 </div>
 
 </template>
 
 <script>
 // import headerComponent from "@/components/header.vue";   
-import footerComponent from "@/components/footer.vue"
+// import footerComponent from "@/components/footer.vue"
 import leftrightCols from "@/components/leftrightcols.vue"
 import postsComponent from "@/components/posts.vue"
 
 
 export default {
   name: 'MainView',
-  components: {footerComponent, leftrightCols, postsComponent}
+  components: {leftrightCols, postsComponent}
 }
 </script>
 

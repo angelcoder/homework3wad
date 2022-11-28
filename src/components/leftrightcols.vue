@@ -15,7 +15,7 @@ export default {
 <style scoped>
 .page-leftCol{
   flex: 0 0 100px;
-  max-width: 20%; 
+  max-width: 20%;
 }
 
 .leftCol {
@@ -25,6 +25,6 @@ export default {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  background-color: #A9A9A9;
+  background-color: rgb(197, 195, 195);
 }
 </style>
